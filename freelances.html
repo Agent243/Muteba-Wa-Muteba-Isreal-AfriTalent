@@ -1,76 +1,102 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriTalent | Plateforme Freelance</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top bg-light" id="main-navbar">
+<main style="margin-top: 90px;">
+        <section id="freelances-header" class="py-5 bg-light text-center">
             <div class="container">
+                <h1 class="display-5 fw-bold">Nos Talents Tech</h1>
+                <p class="lead text-muted">Découvrez les meilleurs experts freelances prêts à rejoindre vos projets.</p>
                 
-                <a class="navbar-brand fw-bold text-primary" href="index.html">
-                    AfriTalent
-                </a>
+                <!-- Boutons de filtrage (La logique JS viendra au Commit 8) -->
+                <div class="d-flex flex-wrap justify-content-center gap-2 mt-4" id="filter-buttons">
+                    <button class="btn btn-primary active" data-filter="all">Tous</button>
+                    <button class="btn btn-outline-primary" data-filter="dev">Développement</button>
+                    <button class="btn btn-outline-primary" data-filter="network">Réseaux & Sécurité</button>
+                    <button class="btn btn-outline-primary" data-filter="data">Data & Bases de données</button>
+                </div>
+            </div>
+        </section>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Afficher/Masquer la navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarContent">
+        <section id="freelances-grid" class="py-5">
+            <div class="container">
+                <div class="row g-4" id="freelance-list">
                     
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="freelances.html">Freelances</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="tarifs.html">Tarifs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">À propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                    
-                    <div class="d-flex align-items-center gap-3">
-                        
-                        <button class="btn btn-outline-dark btn-sm rounded-circle" id="theme-toggle" aria-label="Basculer le thème" title="Activer le mode sombre">
-                            <i class="bi bi-moon-fill" id="theme-icon"></i>
-                        </button>
-                        
-                        <a href="contact.html" class="btn btn-primary fw-bold">Rejoindre AfriTalent</a>
+                    <!-- Profil 1 -->
+                    <div class="col-lg-4 col-md-6 freelance-item" data-category="network">
+                        <div class="card h-100 shadow-sm">
+                            <!-- Image fictive (attribut alt obligatoire pour l'accessibilité) -->
+                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Portrait de l'Ingénieur Réseau">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold">Amadou T.</h3>
+                                <h4 class="card-subtitle mb-2 text-primary h6">Ingénieur Réseau Cisco</h4>
+                                <p class="card-text small text-muted">Spécialiste en configuration de routeurs, protocoles de routage et adressage IPv6. Accompagnement sur les architectures complexes.</p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <span class="badge bg-secondary">CCNA</span>
+                                    <span class="badge bg-secondary">IPv6</span>
+                                    <span class="badge bg-secondary">Routage</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">120€ / jour</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Voir profil</a>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Profil 2 -->
+                    <div class="col-lg-4 col-md-6 freelance-item" data-category="dev">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Portrait du Développeur Python">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold">Sarah K.</h3>
+                                <h4 class="card-subtitle mb-2 text-primary h6">Développeuse Python & Sécurité</h4>
+                                <p class="card-text small text-muted">Création d'outils utilitaires, de scripts d'automatisation et analyse de vulnérabilités. Passionnée par les CTF.</p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <span class="badge bg-secondary">Python</span>
+                                    <span class="badge bg-secondary">Cybersécurité</span>
+                                    <span class="badge bg-secondary">Scripts</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">150€ / jour</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Voir profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profil 3 -->
+                    <div class="col-lg-4 col-md-6 freelance-item" data-category="data">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Portrait de l'Expert SQL">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold">Jean-Marc B.</h3>
+                                <h4 class="card-subtitle mb-2 text-primary h6">Architecte Base de Données</h4>
+                                <p class="card-text small text-muted">Modélisation de schémas complexes, gestion des contraintes d'intégrité et création de triggers SQL avancés.</p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <span class="badge bg-secondary">SQL</span>
+                                    <span class="badge bg-secondary">Modélisation</span>
+                                    <span class="badge bg-secondary">Data</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">180€ / jour</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Voir profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profils 4 à 9 (Simplifiés pour la structure, vous pourrez modifier les noms/textes) -->
+                    <!-- Profil 4 -->
+                    <div class="col-lg-4 col-md-6 freelance-item" data-category="dev"><div class="card h-100 shadow-sm"><img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Dev Front"><div class="card-body"><h3 class="card-title h5 fw-bold">Fatou N.</h3><h4 class="card-subtitle mb-2 text-primary h6">Dev Front-End</h4><p class="card-text small text-muted">Création d'interfaces e-commerce responsives et animations fluides.</p></div><div class="card-footer bg-transparent d-flex justify-content-between"><span class="fw-bold">110€ / jour</span><a href="#" class="btn btn-sm btn-outline-primary">Voir</a></div></div></div>
+                    <!-- Profil 5 -->
+                    <div class="col-lg-4 col-md-6 freelance-item" data-category="network"><div class="card h-100 shadow-sm"><img src="https://via.placeholder.com/400x250" class="card-img-top" alt="DevOps"><div class="card-body"><h3 class="card-title h5 fw-bold">Marc D.</h3><h4 class="card-subtitle mb-2 text-primary h6">Ingénieur Cloud</h4><p class="card-text small text-muted">Déploiement sur environnements virtualisés et serveurs distants.</p></div><div class="card-footer bg-transparent d-flex justify-content-between"><span class="fw-bold">200€ / jour</span><a href="#" class="btn btn-sm btn-outline-primary">Voir</a></div></div></div>
+                    <!-- Profil 6 -->
+                    <div class="col-lg-4 col-md-6 freelance-item" data-category="dev"><div class="card h-100 shadow-sm"><img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Dev Mobile"><div class="card-body"><h3 class="card-title h5 fw-bold">Awa S.</h3><h4 class="card-subtitle mb-2 text-primary h6">Dev Mobile iOS/Android</h4><p class="card-text small text-muted">Développement d'applications natives et gestion des modes DFU/Restaurations.</p></div><div class="card-footer bg-transparent d-flex justify-content-between"><span class="fw-bold">160€ / jour</span><a href="#" class="btn btn-sm btn-outline-primary">Voir</a></div></div></div>
+                    <!-- Profil 7 -->
+                    <div class="col-lg-4 col-md-6 freelance-item" data-category="data"><div class="card h-100 shadow-sm"><img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Data Analyst"><div class="card-body"><h3 class="card-title h5 fw-bold">Eric L.</h3><h4 class="card-subtitle mb-2 text-primary h6">Data Analyst</h4><p class="card-text small text-muted">Analyse de statistiques et création de dashboards interactifs.</p></div><div class="card-footer bg-transparent d-flex justify-content-between"><span class="fw-bold">140€ / jour</span><a href="#" class="btn btn-sm btn-outline-primary">Voir</a></div></div></div>
+                    <!-- Profil 8 -->
+                    <div class="col-lg-4 col-md-6 freelance-item" data-category="dev"><div class="card h-100 shadow-sm"><img src="https://via.placeholder.com/400x250" class="card-img-top" alt="UX Designer"><div class="card-body"><h3 class="card-title h5 fw-bold">Chloé M.</h3><h4 class="card-subtitle mb-2 text-primary h6">UX/UI Designer</h4><p class="card-text small text-muted">Design de maquettes modernes avec esthétique "Glassmorphism".</p></div><div class="card-footer bg-transparent d-flex justify-content-between"><span class="fw-bold">130€ / jour</span><a href="#" class="btn btn-sm btn-outline-primary">Voir</a></div></div></div>
+                    <!-- Profil 9 -->
+                    <div class="col-lg-4 col-md-6 freelance-item" data-category="network"><div class="card h-100 shadow-sm"><img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Pentester"><div class="card-body"><h3 class="card-title h5 fw-bold">Youssef A.</h3><h4 class="card-subtitle mb-2 text-primary h6">Auditeur Sécurité</h4><p class="card-text small text-muted">Tests d'intrusion et sécurisation des infrastructures web.</p></div><div class="card-footer bg-transparent d-flex justify-content-between"><span class="fw-bold">190€ / jour</span><a href="#" class="btn btn-sm btn-outline-primary">Voir</a></div></div></div>
                     
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <main style="margin-top: 100px;"> 
-        <section id="hero" class="container">
-            <h1>Bienvenue sur AfriTalent</h1>
-            <p>Découvrez notre réseau de freelances talentueux et expérimentés.</p>
         </section>
-
     </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>

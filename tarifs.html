@@ -1,76 +1,91 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriTalent | Plateforme Freelance</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top bg-light" id="main-navbar">
+<main style="margin-top: 90px;">
+        <section id="pricing" class="py-5 text-center">
             <div class="container">
+                <h1 class="display-5 fw-bold mb-5">Des tarifs transparents, sans surprise</h1>
                 
-                <a class="navbar-brand fw-bold text-primary" href="index.html">
-                    AfriTalent
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Afficher/Masquer la navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="freelances.html">Freelances</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="tarifs.html">Tarifs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">À propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://instagram.com/israel2.3">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                    
-                    <div class="d-flex align-items-center gap-3">
-                        
-                        <button class="btn btn-outline-dark btn-sm rounded-circle" id="theme-toggle" aria-label="Basculer le thème" title="Activer le mode sombre">
-                            <i class="bi bi-moon-fill" id="theme-icon"></i>
-                        </button>
-                        
-                        <a href="contact.html" class="btn btn-primary fw-bold">Rejoindre AfriTalent</a>
+                <div class="row g-4 justify-content-center">
+                    <!-- Offre 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body p-5">
+                                <h2 class="h4 fw-bold text-muted">Freelance Débutant</h2>
+                                <div class="display-4 fw-bold my-3">0€<span class="fs-6 text-muted">/mois</span></div>
+                                <ul class="list-unstyled text-start mt-4 mb-4">
+                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Création de profil gratuit</li>
+                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Postuler à 5 offres/mois</li>
+                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Commission de 10%</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-outline-primary w-100">S'inscrire</a>
+                            </div>
+                        </div>
                     </div>
-                    
+                    <!-- Offre 2 (Mise en avant) -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow border-primary">
+                            <div class="card-header bg-primary text-white fw-bold py-3">Le plus populaire</div>
+                            <div class="card-body p-5">
+                                <h2 class="h4 fw-bold">Freelance Pro</h2>
+                                <div class="display-4 fw-bold text-primary my-3">19€<span class="fs-6 text-muted">/mois</span></div>
+                                <ul class="list-unstyled text-start mt-4 mb-4">
+                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Postuler en illimité</li>
+                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Profil mis en avant</li>
+                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Commission réduite à 5%</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-primary w-100">Devenir Pro</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Offre 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body p-5">
+                                <h2 class="h4 fw-bold text-muted">Entreprise</h2>
+                                <div class="display-4 fw-bold my-3">99€<span class="fs-6 text-muted">/mois</span></div>
+                                <ul class="list-unstyled text-start mt-4 mb-4">
+                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Dépôt d'annonces illimité</li>
+                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Accès direct aux profils</li>
+                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Support prioritaire</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-outline-primary w-100">Compte Entreprise</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <main style="margin-top: 100px;"> 
-        <section id="hero" class="container">
-            <h1>Bienvenue sur AfriTalent</h1>
-            <p>Découvrez nos tarifs transparents et compétitifs pour les freelances et les clients.</p>
         </section>
 
+        <!-- FAQ avec Accordéon Bootstrap -->
+        <section id="faq" class="py-5 bg-light">
+            <div class="container max-w-md mx-auto" style="max-width: 800px;">
+                <h2 class="text-center fw-bold mb-5">Foire Aux Questions</h2>
+                
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Comment sont sécurisés les paiements ?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Les paiements sont bloqués sur un compte séquestre au début de la mission et ne sont libérés au freelance qu'une fois le travail validé par le client.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Puis-je annuler mon abonnement Pro ?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Oui, tous nos abonnements sont sans engagement. Vous pouvez annuler à tout moment depuis les paramètres de votre compte.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p>&copy; <span id="current-year"></span> AfriTalent. Tous droits réservés.</p>
     </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
