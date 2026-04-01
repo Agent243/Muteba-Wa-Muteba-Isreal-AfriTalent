@@ -1,0 +1,166 @@
+/* ==========================================================================
+   1. IMPORT DES POLICES (Google Fonts)
+   Exigence : Au minimum 2 polices (Titres + Corps de texte)
+   ========================================================================== */
+/* Poppins pour des titres arrondis et modernes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+/* Inter pour une lisibilité parfaite du corps de texte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* ==========================================================================
+   2. VARIABLES CSS GLOBAL (:root)
+   Exigence : Définir et utiliser au minimum 6 variables
+   ========================================================================== */
+:root {
+    /* Couleurs principales */
+    --primary-color: #2563eb;    /* Bleu tech, dynamique et rassurant */
+    --primary-dark: #1e40af;     /* Bleu foncé pour les effets de survol */
+    --secondary-color: #f59e0b;  /* Orange/Ambre pour les étoiles et accents */
+    
+    /* Couleurs de fond et texte (Light Mode par défaut) */
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --text-muted: #64748b;
+    --card-bg: #ffffff;
+    
+    /* Effets de Glassmorphism (Transparence et flou) */
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    
+    /* Typographie */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Espacements et Bordures */
+    --radius-md: 12px;
+    --radius-lg: 24px;
+    --transition-speed: 0.3s;
+}
+
+/* ==========================================================================
+   3. RESET ET STYLES DE BASE (Layout général)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    /* Transition globale pour préparer le Dark Mode en douceur */
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+/* Application de la police de titre à tous les niveaux de titres */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: var(--font-heading);
+    color: var(--text-color);
+}
+
+/* Personnalisation des liens généraux */
+a {
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+/* Remplacements des couleurs Bootstrap par nos variables */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: var(--radius-md);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: var(--radius-md);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   4. STYLES DE LA NAVBAR
+   Exigence : Navbar stylisée, logo visible, liens alignés
+   ========================================================================== */
+#main-navbar {
+    /* Utilisation de nos variables de glassmorphism pour la navbar */
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(10px); /* Flou d'arrière-plan */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    transition: all var(--transition-speed) ease;
+    padding: 1rem 0;
+}
+
+/* Style du Logo */
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* Style des liens de navigation */
+.navbar-nav .nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0 0.5rem;
+    position: relative;
+}
+
+/* Effet au survol des liens (Soulignement animé) */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Style du bouton Dark Mode */
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-color: var(--text-muted);
+    color: var(--text-color);
+}
+
+#theme-toggle:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
