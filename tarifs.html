@@ -3,116 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkUp Freelance - Plateforme Moderne</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Comparez les offres AfriTalent pour freelances et entreprises.">
+    <title>Tarifs | AfriTalent</title>
+    <link rel="icon" href="images/afritalent-logo.svg" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
-    <div class="background-glows" aria-hidden="true">
-        <div class="glow glow-1"></div>
-        <div class="glow glow-2"></div>
-    </div>
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar" aria-label="Navigation principale">
+        <div class="container">
+            <a href="index.html" class="navbar-brand fw-bold" aria-label="AfriTalent - Accueil">
+                <img src="images/afritalent-logo.svg" alt="" aria-hidden="true">
+                <span class="brand-text">Afri<span>Talent</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="freelances.html" class="nav-link">Freelances</a></li>
+                    <li class="nav-item"><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">À propos</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="theme-toggle" class="theme-toggle" type="button" data-theme-toggle aria-label="Changer le thème">
+                            <span id="theme-icon" class="theme-symbol" aria-hidden="true">DARK</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <header class="glass-element">
-        <a href="#" class="logo">Link<span>Up</span></a>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Accueil</a></li>
-                <li><a href="#freelances">Freelances</a></li>
-                <li><a href="#tarifs">Tarifs</a></li>
-            </ul>
-        </nav>
-        <main style="margin-top: 90px;">
-        <section id="pricing" class="py-5 text-center">
+    <main class="site-main">
+        <section class="page-hero text-center">
             <div class="container">
-                <h1 class="display-5 fw-bold mb-5">Des tarifs transparents, sans surprise</h1>
-                
-                <div class="row g-4 justify-content-center">
-                    <!-- Offre 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-sm border-0">
-                            <div class="card-body p-5">
-                                <h2 class="h4 fw-bold text-muted">Freelance Débutant</h2>
-                                <div class="display-4 fw-bold my-3">0€<span class="fs-6 text-muted">/mois</span></div>
-                                <ul class="list-unstyled text-start mt-4 mb-4">
-                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Création de profil gratuit</li>
-                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Postuler à 5 offres/mois</li>
-                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Commission de 10%</li>
-                                </ul>
-                                <a href="contact.html" class="btn btn-outline-primary w-100">S'inscrire</a>
-                            </div>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <p class="section-kicker">Tarifs</p>
+                        <h1>Des offres simples pour démarrer puis grandir.</h1>
+                        <p class="hero-lead">Choisissez une formule adaptée à votre rythme, que vous soyez freelance, équipe produit ou entreprise en croissance.</p>
+                        <div class="billing-note">
+                            <span><i class="bi bi-calendar2-check" aria-hidden="true"></i> Mensuel</span>
+                            <span><i class="bi bi-percent" aria-hidden="true"></i> Annuel -20%</span>
                         </div>
                     </div>
-                    <!-- Offre 2 (Mise en avant) -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow border-primary">
-                            <div class="card-header bg-primary text-white fw-bold py-3">Le plus populaire</div>
-                            <div class="card-body p-5">
-                                <h2 class="h4 fw-bold">Freelance Pro</h2>
-                                <div class="display-4 fw-bold text-primary my-3">19€<span class="fs-6 text-muted">/mois</span></div>
-                                <ul class="list-unstyled text-start mt-4 mb-4">
-                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Postuler en illimité</li>
-                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Profil mis en avant</li>
-                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Commission réduite à 5%</li>
-                                </ul>
-                                <a href="contact.html" class="btn btn-primary w-100">Devenir Pro</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Offre 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-sm border-0">
-                            <div class="card-body p-5">
-                                <h2 class="h4 fw-bold text-muted">Entreprise</h2>
-                                <div class="display-4 fw-bold my-3">99€<span class="fs-6 text-muted">/mois</span></div>
-                                <ul class="list-unstyled text-start mt-4 mb-4">
-                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Dépôt d'annonces illimité</li>
-                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Accès direct aux profils</li>
-                                    <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Support prioritaire</li>
-                                </ul>
-                                <a href="contact.html" class="btn btn-outline-primary w-100">Compte Entreprise</a>
-                            </div>
-                        </div>
+                    <div class="col-lg-6">
+                        <img class="hero-image" src="images/photo-hero-pricing.jpg" alt="Plans de tarification modernes et flexibles">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ avec Accordéon Bootstrap -->
-        <section id="faq" class="py-5 bg-light">
-            <div class="container max-w-md mx-auto" style="max-width: 800px;">
-                <h2 class="text-center fw-bold mb-5">Foire Aux Questions</h2>
-                
-                <div class="accordion" id="faqAccordion">
+        <section class="section-block pt-0">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <article class="pricing-card">
+                            <h2>Gratuit</h2>
+                            <p class="price">0 XOF<span>/mois</span></p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Profil public visible</li>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Accès aux missions de base</li>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>1 candidature par mois</li>
+                                <li class="muted"><i class="bi bi-dash-circle" aria-hidden="true"></i>Support prioritaire</li>
+                                <li class="muted"><i class="bi bi-dash-circle" aria-hidden="true"></i>Statistiques avancées</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline-primary w-100">Commencer</a>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <article class="pricing-card featured">
+                            <span class="plan-badge">Populaire</span>
+                            <h2>Pro</h2>
+                            <p class="price">4.000 XOF<span>/mois</span></p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Profil mis en avant</li>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Accès illimité aux missions</li>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>10 candidatures par mois</li>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Support prioritaire</li>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Badge vérifié</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary w-100">Choisir Pro</a>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <article class="pricing-card">
+                            <h2>Entreprise</h2>
+                            <p class="price">20.000 XOF<span>/mois</span></p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Tout du plan Pro</li>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Accès illimité aux freelances</li>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Support dédié 7j/7</li>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Dashboard entreprise</li>
+                                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Facturation centralisée</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline-primary w-100">Contacter l'équipe</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block section-soft">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">FAQ</p>
+                    <h2>Questions fréquentes.</h2>
+                </div>
+                <div class="accordion faq-accordion" id="faqAccordion">
                     <div class="accordion-item">
                         <h3 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                Comment sont sécurisés les paiements ?
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                Comment fonctionne la facturation ?
                             </button>
                         </h3>
                         <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Les paiements sont bloqués sur un compte séquestre au début de la mission et ne sont libérés au freelance qu'une fois le travail validé par le client.
-                            </div>
+                            <div class="accordion-body">La facturation est mensuelle. Le paiement annuel permet de bénéficier d'une réduction de 20%.</div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h3 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                Puis-je annuler mon abonnement Pro ?
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                Puis-je annuler mon abonnement ?
                             </button>
                         </h3>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Oui, tous nos abonnements sont sans engagement. Vous pouvez annuler à tout moment depuis les paramètres de votre compte.
-                            </div>
+                            <div class="accordion-body">Oui, l'abonnement peut être arrêté à tout moment, sans frais cachés.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Les paiements sont-ils sécurisés ?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">Oui, les transactions sont pensées pour protéger les clients et les freelances jusqu'à la validation de la mission.</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <p>&copy; <span id="current-year"></span> AfriTalent. Tous droits réservés.</p>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="footer-brand" aria-label="AfriTalent - Accueil">
+                        <img src="images/afritalent-logo.svg" alt="" aria-hidden="true">
+                        <span class="brand-text">Afri<span>Talent</span></span>
+                    </a>
+                    <p>La plateforme freelance tech qui connecte l'expertise africaine aux projets ambitieux.</p>
+                </div>
+                <div>
+                    <h2>Liens</h2>
+                    <a href="freelances.html">Freelances</a>
+                    <a href="tarifs.html">Tarifs</a>
+                    <a href="about.html">À propos</a>
+                </div>
+                <div>
+                    <h2>Contact</h2>
+                    <a href="mailto:agent210601@gmail.com">agent210601@gmail.com</a>
+                    <a href="tel:+221710080086">+221 71 008 00 86</a>
+                    <a href="https://wa.me/221710080086">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span class="current-year"></span> AfriTalent By Agent23. Tous droits réservés.</span>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Retour en haut" hidden>
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
